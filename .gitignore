@@ -1,0 +1,67 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+/.idea/
+/*.iml
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+*.log
+*.vscode/
+
+# Composer vendor dir
+/vendor/
+
+# Node modules (если используете npm/webpack)
+node_modules/
+
+# Yii runtime and assets
+/runtime/
+/web/assets/
+/frontend/runtime/
+/frontend/web/assets/
+/backend/runtime/
+/backend/web/assets/
+/console/runtime/
+
+# Environment configs
+.env
+.env.local
+/.env
+/.env.local
+
+# Yii2 config file (если он у вас не в репозитории)
+common/config/main-local.php
+frontend/config/main-local.php
+backend/config/main-local.php
+console/config/main-local.php
+
+# Cache & logs
+*.log
+*.cache
+/.cache/
+/*.log
+
+# PHPUnit results
+/tests/_output/
+
+# Coverage reports
+/coverage/
+
+# Build files (если есть)
+build/
+dist/
+*.tgz
+
+# Uploaded files (если есть)
+/web/uploads/
+
+# Misc
+*.sql
+*.sqlite
+*.bak
+*.old
