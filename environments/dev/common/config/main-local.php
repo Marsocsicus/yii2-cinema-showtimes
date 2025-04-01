@@ -40,4 +40,13 @@ return [
             // https://symfony.com/doc/current/mailer.html#using-a-3rd-party-transport
         ],
     ],
+
+    'bootstrap' => ['gii'],
+    'modules' => [
+        'gii' => [
+            'class' => 'yii\gii\Module',
+        ],
+        // ...
+    ],
+    // ...
 ];
