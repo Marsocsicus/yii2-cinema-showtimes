@@ -39,6 +39,9 @@ AppAsset::register($this);
     ];
     if (Yii::$app->user->isGuest) {
         // $menuItems[] = ['label' => 'Login', 'url' => ['/user/login']];
+    } else {
+        $menuItems[] = ['label' => 'FilmSessions', 'url' => ['/film-session/index']];
+        $menuItems[] = ['label' => 'Film', 'url' => ['/film/index']];
     }
     
     echo Nav::widget([
