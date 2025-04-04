@@ -29,6 +29,8 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_INACTIVE = 9;
     const STATUS_ACTIVE = 10;
 
+    const ROLE_USER = 0;
+    const ROLE_ADMIN = 1;
 
     /**
      * {@inheritdoc}
@@ -54,8 +56,27 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_INACTIVE],
+            [['username', 'password_hash'], 'required'],
+            [['status', 'role', 'created_at', 'updated_at'], 'integer'],
+            [['username'], 'string', 'max' => 50],
+            [['password_hash', 'password_reset_token'], 'string', 'max' => 255],
+            ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => 'Username',
+            'password_hash' => 'Password',
+            'password_reset_token' => 'Pssword reset token',
+            'status' => 'Status',
+            'role' => 'Role',
         ];
     }
 
