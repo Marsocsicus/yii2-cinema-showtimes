@@ -59,6 +59,7 @@ dist/
 
 # Uploaded files (если есть)
 /web/uploads/
+/frontend/web/images
 
 # Misc
 *.sql

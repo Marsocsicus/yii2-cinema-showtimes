@@ -26,15 +26,15 @@ class FilmForm extends Model
     public function rules()
     {
         return [
-            [['title'], 'string', 'max' => self::MAX_DESCRIPTION_LENGHT],
+            [['title'], 'string', 'max' => self::MAX_TITLE_LENGHT],
             [['image'], 'file',
                 'skipOnEmpty' => false,
                 'extensions' => ['jpg', 'png'],
                 'checkExtensionByMimeType' => true,
                 'maxSize' => $this->getMaxFileSize()],
             [['description'], 'string', 'max' => self::MAX_DESCRIPTION_LENGHT],
-            [['duration'], 'string', 'max' => self::MAX_DURATION],
-            [['age_limit'], 'string', 'max' => self::MAX_AGE_LIMIT],
+            [['duration'], 'integer', 'max' => self::MAX_DURATION],
+            [['age_limit'], 'integer', 'max' => self::MAX_AGE_LIMIT],
         ];
     }
 
