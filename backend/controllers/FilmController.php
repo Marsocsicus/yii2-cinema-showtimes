@@ -2,11 +2,16 @@
 
 namespace backend\controllers;
 
-use common\models\Film;
+use YIi;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
+
+use common\models\Film;
+
+use backend\models\FilmForm;
 
 /**
  * FilmController implements the CRUD actions for Film model.
@@ -77,14 +82,16 @@ class FilmController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Film();
+        $model = new FilmForm();
 
-        if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+
+            if ($model->save()) {
+                Yii::$app->session->setFlash('success', 'Film created!');
+
+                return $this->goHome();
             }
-        } else {
-            $model->loadDefaultValues();
         }
 
         return $this->render('create', [
