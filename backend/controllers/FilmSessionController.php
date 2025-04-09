@@ -2,11 +2,14 @@
 
 namespace backend\controllers;
 
-use common\models\FilmSession;
-use common\models\FilmSessionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
+use common\models\FilmSession;
+use common\models\FilmSessionSearch;
+use common\models\Film;
+use yii\helpers\ArrayHelper;
 
 /**
  * FilmSessionController implements the CRUD actions for FilmSession model.
@@ -68,17 +71,18 @@ class FilmSessionController extends Controller
     public function actionCreate()
     {
         $model = new FilmSession();
+        $activeFilms = Film::getActiveFilms();
+        $filmList = ArrayHelper::map($activeFilms, 'id', 'title');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
-        } else {
-            $model->loadDefaultValues();
         }
 
         return $this->render('create', [
             'model' => $model,
+            'filmList' => $filmList,
         ]);
     }
 
@@ -92,6 +96,8 @@ class FilmSessionController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $activeFilms = Film::getActiveFilms();
+        $filmList = ArrayHelper::map($activeFilms, 'id', 'title');
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -99,6 +105,7 @@ class FilmSessionController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'filmList' => $filmList,
         ]);
     }
 

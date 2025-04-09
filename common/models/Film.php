@@ -21,6 +21,8 @@ use yii\behaviors\TimestampBehavior;
 class Film extends \yii\db\ActiveRecord
 {
 
+    const STATUS_INACTIVE = 9;
+    const STATUS_ACTIVE = 10;
 
     /**
      * {@inheritdoc}
@@ -81,6 +83,11 @@ class Film extends \yii\db\ActiveRecord
     public function getFilmSessions()
     {
         return $this->hasMany(FilmSession::class, ['film_id' => 'id']);
+    }
+
+    public static function getActiveFilms()
+    {
+        return self::find()->where(['status' => self::STATUS_ACTIVE])->all();
     }
 
 }

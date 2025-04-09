@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "film_session".
@@ -30,14 +31,23 @@ class FilmSession extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
-            [['film_id', 'created_at'], 'default', 'value' => null],
-            [['film_id', 'price', 'created_at'], 'integer'],
-            [['start_time', 'price'], 'required'],
-            [['start_time'], 'safe'],
-            [['film_id'], 'exist', 'skipOnError' => true, 'targetClass' => Film::class, 'targetAttribute' => ['film_id' => 'id']],
+            [['film_id', 'price'], 'integer'],
+            [['start_time', 'price', 'film_id'], 'required'],
+            [['film_id'], 'exist', 'skipOnError' => false, 'targetClass' => Film::class, 'targetAttribute' => ['film_id' => 'id']],
+            ['start_time', 'validateStartTime'],
         ];
     }
 
@@ -52,6 +62,7 @@ class FilmSession extends \yii\db\ActiveRecord
             'start_time' => 'Start Time',
             'price' => 'Price',
             'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
     }
 
@@ -65,4 +76,31 @@ class FilmSession extends \yii\db\ActiveRecord
         return $this->hasOne(Film::class, ['id' => 'film_id']);
     }
 
+    public function validateStartTime($attribute, $params)
+    {
+        $lastSession = self::find()
+            ->where(['<', 'start_time', $this->start_time])
+            ->orderBy(['start_time' => SORT_DESC])
+            ->one();
+
+        if ($lastSession) {
+            $lastEnd = $lastSession->start_time + $lastSession->film->duration * 60;
+            $minStart = $lastEnd + 30 * 60;
+
+            if ($this->start_time < $minStart) {
+                $this->addError($attribute, 'Сеанс должен начинаться минимум через 30 минут после окончания предыдущего.');
+            }
+
+        }
+    }
 }
+
+
+/*
+
+-Время и дата. Время между сеансами должно быть не менее 30 минут.
+Вариации:
+
+start_time + duration = end_time + 30min = nearest_avaliable_time
+
+*/
