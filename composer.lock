@@ -4,35 +4,102 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "660a81beaa50876a8090bbbae88c4204",
+    "content-hash": "e3eda128cf8ab5e635544b69749455c5",
     "packages": [
         {
-            "name": "bower-asset/bootstrap",
-            "version": "v5.3.3",
+            "name": "beaten-sect0r/yii2-flatpickr",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+                "url": "https://github.com/Beaten-Sect0r/yii2-flatpickr.git",
+                "reference": "84500928446c6920e522da8952a6ad073ebe27c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6e1f75f420f68e1d52733b8e407fc7c3766c9dba",
-                "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+                "url": "https://api.github.com/repos/Beaten-Sect0r/yii2-flatpickr/zipball/84500928446c6920e522da8952a6ad073ebe27c9",
+                "reference": "84500928446c6920e522da8952a6ad073ebe27c9",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/flatpickr": "^3.0",
+                "yiisoft/yii2": "*"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bs\\Flatpickr\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Volkov",
+                    "email": "beatensect0r@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Datetime picker widget for Yii2 framework",
+            "keywords": [
+                "datetime picker",
+                "extension",
+                "flatpickr",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/Beaten-Sect0r/yii2-flatpickr/issues?state=open",
+                "source": "https://github.com/Beaten-Sect0r/yii2-flatpickr"
+            },
+            "time": "2018-04-10T17:49:03+00:00"
+        },
+        {
+            "name": "bower-asset/bootstrap",
+            "version": "v5.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "85f23534bd2de8041354b297516cf21959091b31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/85f23534bd2de8041354b297516cf21959091b31",
+                "reference": "85f23534bd2de8041354b297516cf21959091b31"
             },
             "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/flatpickr",
+            "version": "v3.1.5",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:chmln/flatpickr.git",
+                "reference": "320f6a01a51762b2a6b70d404c64ffd4243a8ba4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chmln/flatpickr/zipball/320f6a01a51762b2a6b70d404c64ffd4243a8ba4",
+                "reference": "320f6a01a51762b2a6b70d404c64ffd4243a8ba4"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/inputmask",
             "version": "5.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "477f8742d0edb0b916c30d5fb8cf50e83fbcf6e5"
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "reference": "5069a1acaf2682401b92ea500a35dfc5314b83dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/477f8742d0edb0b916c30d5fb8cf50e83fbcf6e5",
-                "reference": "477f8742d0edb0b916c30d5fb8cf50e83fbcf6e5"
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5069a1acaf2682401b92ea500a35dfc5314b83dc",
+                "reference": "5069a1acaf2682401b92ea500a35dfc5314b83dc"
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -756,12 +823,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "e93a6ae2767d7f7578c2b7961d9d8e27580b2b11"
+                "reference": "ca517a6bbd5d250c9f388577a60513e57063907d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/e93a6ae2767d7f7578c2b7961d9d8e27580b2b11",
-                "reference": "e93a6ae2767d7f7578c2b7961d9d8e27580b2b11",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/ca517a6bbd5d250c9f388577a60513e57063907d",
+                "reference": "ca517a6bbd5d250c9f388577a60513e57063907d",
                 "shasum": ""
             },
             "require": {
@@ -828,7 +895,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-24T15:27:15+00:00"
+            "time": "2025-04-03T06:46:57+00:00"
         },
         {
             "name": "symfony/mime",
@@ -1248,17 +1315,63 @@
             "time": "2024-09-25T14:21:43+00:00"
         },
         {
+            "name": "twbs/bootstrap",
+            "version": "v3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6d03173a1aad98e75f7d33e65b411c519176c59a",
+                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v3.0.3"
+            },
+            "time": "2013-12-05T16:09:10+00:00"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "78bd6fd073482fa0a3809deae14db38a1ee27376"
+                "reference": "97bc1054963c99ff56ccfe4eb2f9e9dfd0a522b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/78bd6fd073482fa0a3809deae14db38a1ee27376",
-                "reference": "78bd6fd073482fa0a3809deae14db38a1ee27376",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/97bc1054963c99ff56ccfe4eb2f9e9dfd0a522b3",
+                "reference": "97bc1054963c99ff56ccfe4eb2f9e9dfd0a522b3",
                 "shasum": ""
             },
             "require": {
@@ -1367,7 +1480,57 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-20T10:42:28+00:00"
+            "time": "2025-04-04T08:29:08+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-bootstrap",
+            "version": "2.0.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-bootstrap.git",
+                "reference": "d2518d1f6fb0b3e0e3aba50b9c35f56d580eb3c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/d2518d1f6fb0b3e0e3aba50b9c35f56d580eb3c4",
+                "reference": "d2518d1f6fb0b3e0e3aba50b9c35f56d580eb3c4",
+                "shasum": ""
+            },
+            "require": {
+                "twbs/bootstrap": "3.0.*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii\\bootstrap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "The Twitter Bootstrap extension for the Yii framework",
+            "keywords": [
+                "bootstrap",
+                "yii2"
+            ],
+            "support": {
+                "forum": "http://www.yiiframework.com/forum/",
+                "irc": "irc://irc.freenode.net/yii",
+                "issues": "https://github.com/yiisoft/yii2/issues?labels=ext%3Abootstrap",
+                "source": "https://github.com/yiisoft/yii2",
+                "wiki": "http://www.yiiframework.com/wiki/"
+            },
+            "time": "2014-04-13T21:58:59+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap5",
@@ -1681,16 +1844,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "76bf037a3e98e8e0826e342efecae8f205ebba98"
+                "reference": "6f0141d7702089d361ae64f76a47f81e13243ad0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/76bf037a3e98e8e0826e342efecae8f205ebba98",
-                "reference": "76bf037a3e98e8e0826e342efecae8f205ebba98",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/6f0141d7702089d361ae64f76a47f81e13243ad0",
+                "reference": "6f0141d7702089d361ae64f76a47f81e13243ad0",
                 "shasum": ""
             },
             "require": {
-                "behat/gherkin": "^4.6.2",
+                "behat/gherkin": "^4.12",
                 "codeception/lib-asserts": "^2.0",
                 "codeception/stub": "^4.1",
                 "ext-curl": "*",
@@ -1795,7 +1958,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2025-03-08T11:26:29+00:00"
+            "time": "2025-04-01T21:57:09+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -2362,12 +2525,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "ca06f23f35cf0b70a6f56d3d95c51bbc1062fade"
+                "reference": "c2270caaabe631b3b44c85f99e5a04bbb8060d16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/ca06f23f35cf0b70a6f56d3d95c51bbc1062fade",
-                "reference": "ca06f23f35cf0b70a6f56d3d95c51bbc1062fade",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c2270caaabe631b3b44c85f99e5a04bbb8060d16",
+                "reference": "c2270caaabe631b3b44c85f99e5a04bbb8060d16",
                 "shasum": ""
             },
             "require": {
@@ -2455,7 +2618,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.7"
+                "source": "https://github.com/guzzle/psr7/tree/2.7.1"
             },
             "funding": [
                 {
@@ -2471,7 +2634,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-03T10:49:42+00:00"
+            "time": "2025-03-27T12:30:47+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -4511,12 +4674,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "2e4af9c952617cc3f9559ff706aee420a8464c36"
+                "reference": "a3011c7b7adb58d89f6c0d822abb641d7a5f9719"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/2e4af9c952617cc3f9559ff706aee420a8464c36",
-                "reference": "2e4af9c952617cc3f9559ff706aee420a8464c36",
+                "url": "https://api.github.com/repos/symfony/console/zipball/a3011c7b7adb58d89f6c0d822abb641d7a5f9719",
+                "reference": "a3011c7b7adb58d89f6c0d822abb641d7a5f9719",
                 "shasum": ""
             },
             "require": {
@@ -4597,7 +4760,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-03T17:16:38+00:00"
+            "time": "2025-04-07T15:42:41+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -5131,12 +5294,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "28ee818fce4a73ac1474346b94e4b966f665c53f"
+                "reference": "f01987f45676778b474468aa266fe2eda1f2bc7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/28ee818fce4a73ac1474346b94e4b966f665c53f",
-                "reference": "28ee818fce4a73ac1474346b94e4b966f665c53f",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f01987f45676778b474468aa266fe2eda1f2bc7e",
+                "reference": "f01987f45676778b474468aa266fe2eda1f2bc7e",
                 "shasum": ""
             },
             "require": {
@@ -5195,7 +5358,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-27T20:15:30+00:00"
+            "time": "2025-04-04T09:48:44+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -5512,7 +5675,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "beaten-sect0r/yii2-flatpickr": 20,
+        "yiisoft/yii2-bootstrap": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
