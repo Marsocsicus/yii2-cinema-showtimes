@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use Psy\TabCompletion\Matcher\FunctionsMatcher;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 
@@ -93,14 +94,11 @@ class FilmSession extends \yii\db\ActiveRecord
 
         }
     }
+
+    public static function getFilmsSession()
+    {
+        return self::find()
+            ->orderBy(['start_time' => SORT_ASC])
+            ->all();
+    }
 }
-
-
-/*
-
--Время и дата. Время между сеансами должно быть не менее 30 минут.
-Вариации:
-
-start_time + duration = end_time + 30min = nearest_avaliable_time
-
-*/

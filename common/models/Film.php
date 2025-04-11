@@ -90,4 +90,11 @@ class Film extends \yii\db\ActiveRecord
         return self::find()->where(['status' => self::STATUS_ACTIVE])->all();
     }
 
+    public function getImagePath()
+    {
+        $imagePath = Yii::getAlias('@web') . '/images/film/' . $this->image;
+
+        return $imagePath;
+    }
+
 }
