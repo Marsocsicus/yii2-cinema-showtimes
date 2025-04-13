@@ -29,7 +29,7 @@ class FilmForm extends Model
             [['title'], 'string', 'max' => self::MAX_TITLE_LENGHT],
             [['image'], 'file',
                 'skipOnEmpty' => false,
-                'extensions' => ['jpg', 'png'],
+                'extensions' => ['jpg', 'png', 'jpeg', 'webp'],
                 'checkExtensionByMimeType' => true,
                 'maxSize' => $this->getMaxFileSize()],
             [['description'], 'string', 'max' => self::MAX_DESCRIPTION_LENGHT],

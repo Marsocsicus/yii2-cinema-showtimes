@@ -88,6 +88,10 @@ class FilmSession extends \yii\db\ActiveRecord
             $lastEnd = $lastSession->start_time + $lastSession->film->duration * 60;
             $minStart = $lastEnd + 30 * 60;
 
+            if ($this->start_time <= time()) {
+                $this->addError($attribute, 'Невозможно назначить сеанс ранее текущего времени.');
+            }
+
             if ($this->start_time < $minStart) {
                 $this->addError($attribute, 'Сеанс должен начинаться минимум через 30 минут после окончания предыдущего.');
             }
@@ -99,6 +103,7 @@ class FilmSession extends \yii\db\ActiveRecord
     {
         return self::find()
             ->orderBy(['start_time' => SORT_ASC])
+            ->with('film')
             ->all();
     }
 }
